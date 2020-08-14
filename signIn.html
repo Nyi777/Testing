@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="css/bar.css">
+    <link rel="stylesheet" type="text/css" href="css/sStyle.css">
+</head>
+<body>
+    <ul class="hnavbar">
+        <li><a href="signIn.html">Sign In/Up</a></li>
+        <li><a href="signIn.html">Contact Us</a></li>
+        <li><a href="signIn.html">Best Places</a></li>
+        <lr><a href="index.html">Home</a></lr>
+    </ul>
+    <div class="container">
+        <!---This Box will contain Data or Content-->
+    <div class="box-1">
+       <div class="content-holder">
+            <div><img id="showImg" src="image/in.png"></div>
+            <br><br><br>
+          <h1><span id="showText">---</span></h1>
+          <!--This is a Sign Up Button <br> You can Create New <br>account.-->
+          <!--If you have been created an account,<br>Now you can Login<br>here-->
+          <button class="button-1" onclick="signup()">Sign Up</button>
+          
+          <button class="button-2" onclick="login()">Login</button>
+         
+          
+    </div>
+    </div>
+    <!--This will contain forms-->
+    <div class="box-2">
+      <div class="login-form-container"><br>
+        <h1>Login Form</h1>
+        <input id="nameIn" type="text" placeholder="Username" class="input-field" required><br/>
+        <span id="outputNameIn"></span>
+        <br/>
+        <input id="passwordIn" type="password" placeholder="password" class="input-field" required><br/>
+        <span id="outputPasswordIn"></span>
+        <br/><br><br>
+        <button id="valid" class="login-button">Login</button>
+        <br>
+    </div>
+
+      <!--Creating container for signup form-->
+      <div class="signup-form-container"><br><br><br>
+          <h1>Sign Up Form</h1>
+          <form>
+          <input id="nameUp" type="text" placeholder="Username" class="input-field" required><br/>
+          <span id="outputNamelUp"></span>
+          <br/>
+          <input id="emailUp" type="email" name="email" placeholder="Email" class="input-field" required><br/>
+          <span id="outputEmailUp"></span>
+          <br/>
+          <input id="passwordUp" type="password" placeholder="password" class="input-field" required>
+          </form>
+          <span id="outputPasswordUp"></span><br/><br/>
+          <button id="submit" class="signup-button">Sign Up</button>
+          <br><br>
+          <span id="successfulRegister"></span>
+      </div>
+      
+    </div>
+    </div>
+    <script type="text/javascript" src="js/sign.js"></script>
+    <script type="text/javascript" src="js/validSign.js"></script>
+  
+    
+
+</body>
+</html>

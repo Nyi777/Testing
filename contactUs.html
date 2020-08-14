@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <title>ContactUp Page</title>
+    <link rel="stylesheet" type="text/css" href="css/bar.css">
+    <link rel="stylesheet" type="text/css" href="css/contactonly.css">
+
+</head>
+<body>
+                <ul class="hnavbar">
+                    <li><a href="signOut.html">Sign Out</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                    <li><a href="places.html">Best Places</a></li>
+                    <lr><a href="realIndex.html">Home</a></lr>
+                </ul>
+ <!--
+                <ul class="hnavbar">
+                    <li><a href="signOut.html">Sign Out</a></li>
+                    <li><a href="signIn.html">Sign In/Up</a></li>
+                    <li><a href="contactUp.html">Contact Us</a></li>
+                    <li><a href="places.html">Best Places</a></li>
+                    <lr><a href="index.html">Home</a></lr>
+                </ul>
+-->
+<div class="contact-form">
+        <h2>CONTACT US</h2> 
+    <form method="POST">
+        
+        <input id="name" type="text" name="name" placeholder="Your Name" required>
+        <span id="outputName"><br></span>
+        <input id="phone" type="text" name="phone" placeholder="Phone No" required>
+        <span id="outputPhone"><br></span>
+        <input id="email" type="email" name="email" placeholder="Your Email" required>
+        <span id="outputEmail"><br></span>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea><br>
+        <span id="outputMessage"><br></span>
+        <button onclick="doo()">Sent</button><br><br>
+    </form>
+</div>
+<script >
+
+function doo(){
+    if((document.getElementById("name").value)!="" && (document.getElementById("phone").value).length>9
+     && (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("email").value)) && (document.getElementById("message").value)!="")
+     {
+    alert("Send! Thank U for Your Message...");
+}
+    if((document.getElementById("name").value)=="")
+        document.getElementById("outputName").innerHTML="User name shouldn't empty!";
+        else document.getElementById("outputName").innerText="\n"
+
+    if((document.getElementById("phone").value).length<9)
+        document.getElementById("outputPhone").innerText="Phone number should have 9 digit or more!";
+        else document.getElementById("outputPhone").innerText="\n";
+
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("email").value))
+        document.getElementById("outputEmail").innerText="\n";
+        else document.getElementById("outputEmail").innerText="invalid email";
+
+    if((document.getElementById("message").value)=="")
+        document.getElementById("outputMessage").innerText="Your Message shouldn't empty!";
+        else getElementById("outputMessage").innerText="\n";
+    
+    
+
+
+}
+</script>
+
+
+
+
+</body>
+</html>
